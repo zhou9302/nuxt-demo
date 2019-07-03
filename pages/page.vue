@@ -35,10 +35,10 @@ export default {
   components: {
     Logo
   },
-  async asyncData () {
-    let {data} = await axios.get(`http://localhost:3000/getCode`)
-    return { title: data.result.title }
-  },
+  // async asyncData () {
+  //   let {data} = await axios.get(`http://localhost:3000/getCode`)
+  //   return { title: data.result.title }
+  // },
   data(){
     return{
       title:''
