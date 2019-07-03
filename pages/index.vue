@@ -45,12 +45,12 @@ export default {
     }
   },
   created(){
-    // axios.get('/getCode')
-    //   .then((res)=>{
-    //     let {data} = res
-    //     console.log(data.result.ttile)
-    //     this.title=data.result.title
-    //   })
+    axios.get('http://127.0.0.1:3000/getCode')
+      .then((res)=>{
+        let {data} = res
+        console.log(data.result.ttile)
+        this.title=data.result.title
+      })
   }
 }
 </script>
