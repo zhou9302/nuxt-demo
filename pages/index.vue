@@ -35,10 +35,10 @@ export default {
   components: {
     Logo
   },
-  async asyncData () {
-    await axios.get(`http://127.0.0.1:3000/getCode`)
-    return { title: 'data.title' }
-  },
+  // async asyncData () {
+  //   await axios.get(`http://127.0.0.1:3000/getCode`)
+  //   return { title: 'data.title' }
+  // },
   data(){
     return{
       title:''
