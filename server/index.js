@@ -7,6 +7,16 @@ const app = express()
 const config = require('../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
 
+
+  app.get('/getCode', function (req, res) {
+    res.send({
+      statu: 1,
+      result: {
+        title: '标题'
+      }
+    })
+    console.log('接收到get请求')
+  });
 async function start() {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
@@ -29,4 +39,5 @@ async function start() {
     badge: true
   })
 }
+
 start()

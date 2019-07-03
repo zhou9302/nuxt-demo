@@ -6,7 +6,7 @@
         {{title}}
       </h1>
       <h2 class="subtitle">
-        this is a nuxt-demo
+        hahahahaah
       </h2>
       <div class="links">
         <a
@@ -36,8 +36,8 @@ export default {
     Logo
   },
   async asyncData () {
-    await axios.get(`http://localhost:3000/getCode`)
-    return { title: 'data.title' }
+    let {data} = await axios.get(`http://localhost:3000/getCode`)
+    return { title: data.result.title }
   },
   data(){
     return{
